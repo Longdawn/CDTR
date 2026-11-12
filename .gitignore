@@ -1,0 +1,58 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+DTLR/
+.venv/
+venv/
+env/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.so
+
+# IDE / OS
+.vscode/
+.DS_Store
+
+# Large local assets
+data/
+logs/
+log/
+debug_vis/
+stats_dect/
+check/
+
+# Local papers / notes
+*.pdf
+*.docx
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+
+# Local auxiliary workspaces
+PyLaia-examples/
+text_renderer/
+
+# Generated housekeeping and launcher telemetry
+.pytest_cache/
+/experiments/maintenance/
+/experiments/catalog/*/*
+/experiments/notes/*.tmux.out
+/experiments/notes/*.status
+/experiments/notes/history/launch_logs/
+
+# Local credentials and experiment outputs
+.env
+.env.*
+*.pem
+*.key
+*.safetensors
+/experiments/runs/
+/experiments/assets/
+/outputs/

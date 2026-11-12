@@ -1,0 +1,28 @@
+from config.MTH1000_dtlr import *
+
+
+# Vertical MSR probe for CTC finetuning.
+# This keeps the original CTC training distribution and only changes the
+# aspect-ratio-aware resize policy. Buckets preserve image aspect ratio while
+# allowing long vertical columns to keep more height than the old 1600 cap.
+mth1000_use_msr = True
+mth1000_use_length_msr = False
+mth1000_length_balance = False
+
+mth1000_msr_train_buckets = [
+    (1.5, [768, 800], 1600),
+    (3.0, [640, 704], 1800),
+    (6.0, [480, 544], 2200),
+    (8.0, [384, 448], 2200),
+    (12.0, [320, 384], 2400),
+    (1.0e9, [288, 320], 2400),
+]
+
+mth1000_msr_eval_buckets = [
+    (1.5, 800, 1600),
+    (3.0, 704, 1800),
+    (6.0, 512, 2200),
+    (8.0, 448, 2200),
+    (12.0, 384, 2400),
+    (1.0e9, 320, 2400),
+]
